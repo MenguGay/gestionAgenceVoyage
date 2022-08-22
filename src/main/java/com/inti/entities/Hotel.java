@@ -19,4 +19,51 @@ public class Hotel implements Serializable {
     @OneToMany(mappedBy = "hotel")
     private List<Reservation> reservations;
 
+    public Long getIdHotel() {
+        return idHotel;
+    }
+
+    public void setIdHotel(Long idHotel) {
+        this.idHotel = idHotel;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNbrEtoile() {
+        return nbrEtoile;
+    }
+
+    public void setNbrEtoile(int nbrEtoile) {
+        this.nbrEtoile = nbrEtoile;
+    }
+
+    public List<Avis> getAvis() {
+        return avis;
+    }
+
+    public void setAvis(List<Avis> avis) {
+        this.avis = avis;
+    }
+
+    public Destination getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Destination destination) {
+        this.destination = destination;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
+    }
 }
