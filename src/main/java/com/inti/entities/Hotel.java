@@ -19,7 +19,11 @@ public class Hotel implements Serializable {
     @OneToMany(mappedBy = "hotel")
     private List<Reservation> reservations;
 
-    public Long getIdHotel() {
+    public Hotel() {
+	
+	}
+
+	public Long getIdHotel() {
         return idHotel;
     }
 
@@ -66,4 +70,12 @@ public class Hotel implements Serializable {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
+
+	@Override
+	public String toString() {
+		return "Hotel [idHotel=" + idHotel + ", nom=" + nom + ", nbrEtoile=" + nbrEtoile + ", avis=" + avis
+				+ ", destination=" + destination + ", reservations=" + reservations + "]";
+	}
+    
+    
 }

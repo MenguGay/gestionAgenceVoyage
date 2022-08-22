@@ -12,8 +12,15 @@ public class Avis implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_Hotel")
     private Hotel hotel;
+    
+    
+    
+    public Avis() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    public Long getIdAvis() {
+	public Long getIdAvis() {
         return idAvis;
     }
 
@@ -36,4 +43,11 @@ public class Avis implements Serializable {
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
     }
+
+	@Override
+	public String toString() {
+		return "Avis [idAvis=" + idAvis + ", commentaire=" + commentaire + ", hotel=" + hotel + "]";
+	}
+    
+    
 }

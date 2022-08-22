@@ -14,8 +14,11 @@ public class Voyageur implements Serializable {
     private int age;
     @OneToMany(mappedBy = "voyageur")
     private List<Reservation> reservations;
-
-    public Long getIdVoyageur() {
+ 
+    public Voyageur() {
+	}
+    
+	public Long getIdVoyageur() {
         return idVoyageur;
     }
 
@@ -54,4 +57,11 @@ public class Voyageur implements Serializable {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
+
+	@Override
+	public String toString() {
+		return "Voyageur [idVoyageur=" + idVoyageur + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age
+				+ ", reservations=" + reservations + "]";
+	}
+    
 }

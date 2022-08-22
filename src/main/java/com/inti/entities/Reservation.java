@@ -21,8 +21,19 @@ public class Reservation implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_Hotel")
     private Hotel hotel;
+    
+    public Reservation() {
+	}
 
-    public Long getIdReservation() {
+	public Reservation(Long idReservation, Date dateReservation, int nbJours, Voyageur voyageur, Hotel hotel) {
+		this.idReservation = idReservation;
+		this.dateReservation = dateReservation;
+		this.nbJours = nbJours;
+		this.voyageur = voyageur;
+		this.hotel = hotel;
+	}
+
+	public Long getIdReservation() {
         return idReservation;
     }
 
@@ -61,4 +72,11 @@ public class Reservation implements Serializable {
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
     }
+
+	@Override
+	public String toString() {
+		return "Reservation [idReservation=" + idReservation + ", dateReservation=" + dateReservation + ", nbJours="
+				+ nbJours + ", voyageur=" + voyageur + ", hotel=" + hotel + "]";
+	}
+    
 }

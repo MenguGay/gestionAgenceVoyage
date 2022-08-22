@@ -13,8 +13,12 @@ public class Destination implements Serializable {
     private Long lattitude;
     @OneToMany(mappedBy = "destination")
     private List<Hotel> hotels;
+    
+    public Destination() {
+	
+	}
 
-    public Long getIdDestination() {
+	public Long getIdDestination() {
         return idDestination;
     }
 
@@ -45,4 +49,12 @@ public class Destination implements Serializable {
     public void setHotels(List<Hotel> hotels) {
         this.hotels = hotels;
     }
+
+	@Override
+	public String toString() {
+		return "Destination [idDestination=" + idDestination + ", longitude=" + longitude + ", lattitude=" + lattitude
+				+ ", hotels=" + hotels + "]";
+	}
+    
+    
 }
