@@ -1,10 +1,8 @@
 package com.inti.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Voyageur implements Serializable {
@@ -14,4 +12,6 @@ public class Voyageur implements Serializable {
     private String nom;
     private String prenom;
     private int age;
+    @OneToMany(mappedBy = "voyageur")
+    private List<Reservation> reservations;
 }

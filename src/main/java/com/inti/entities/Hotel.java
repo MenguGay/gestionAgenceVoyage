@@ -16,5 +16,7 @@ public class Hotel implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_Destination")
     private Destination destination;
+    @OneToMany(mappedBy = "hotel")
+    private List<Reservation> reservations;
 
 }
