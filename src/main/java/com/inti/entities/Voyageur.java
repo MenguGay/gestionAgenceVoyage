@@ -10,7 +10,7 @@ public class Voyageur implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idVoyageur;
     private String nom;
-    private String prenom;
+    //private String prenom;
     private int age;
     @OneToMany(mappedBy = "voyageur")
     private List<Reservation> reservations;
