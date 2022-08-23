@@ -4,4 +4,5 @@ public class Type {
 	private Long idType;
 	private String libelle;
 
+
 }
